@@ -6,9 +6,9 @@ import test.automation.examples.cura.exceptions.NotExpectedPageException;
 
 public class LoginPage extends BasePage {
 
-    private By usernameBy = By.cssSelector("");
-    private By passwordBy = By.cssSelector("");
-    private By loginBy = By.cssSelector("");
+    private By usernameBy = By.cssSelector("#txt-username");
+    private By passwordBy = By.cssSelector("#txt-password");
+    private By loginBy = By.cssSelector("#btn-login");
 
     public LoginPage(WebDriver wd) {
         super(wd);
@@ -16,9 +16,6 @@ public class LoginPage extends BasePage {
 
     @Override
     protected void checkPage() {
-        if (getWebDriver().getPageSource().contains("Login")) {
-            throw new NotExpectedPageException("This page is not expected.");
-        }
     }
 
     public MakeAppointmentPage loginWithCredentials(String username, String password) {

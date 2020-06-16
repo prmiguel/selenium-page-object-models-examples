@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 public class SummaryAppointmentPage extends BasePage {
 
-    private By facilityBy = By.cssSelector("");
-    private By hospitalReadmissionBy = By.cssSelector("");
-    private By programBy = By.cssSelector("");
-    private By visitDateBy = By.cssSelector("");
-    private By commentBy = By.cssSelector("");
+    private By facilityBy = By.cssSelector("#facility");
+    private By hospitalReadmissionBy = By.cssSelector("#hospital_readmission");
+    private By programBy = By.cssSelector("#program");
+    private By visitDateBy = By.cssSelector("#visit_date");
+    private By commentBy = By.cssSelector("#comment");
 
     public SummaryAppointmentPage(WebDriver wd) {
         super(wd);

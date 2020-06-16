@@ -7,18 +7,18 @@ import org.openqa.selenium.support.ui.Select;
 
 public class MakeAppointmentPage extends BasePage {
 
-    private By facilityBy = By.cssSelector("");
-    private By hospitalReadmissionBy = By.cssSelector("");
-    private By visitDateBy = By.cssSelector("");
-    private By commentBy = By.cssSelector("");
-    private By bookAppointmentBy = By.cssSelector("");
+    private By facilityBy = By.cssSelector("#combo_facility");
+    private By hospitalReadmissionBy = By.cssSelector("#chk_hospotal_readmission");
+    private By visitDateBy = By.cssSelector("#txt_visit_date");
+    private By commentBy = By.cssSelector("#txt_comment");
+    private By bookAppointmentBy = By.cssSelector("#btn-book-appointment");
 
     public MakeAppointmentPage(WebDriver wd) {
         super(wd);
     }
 
     private By programBy(String program) {
-        return By.cssSelector(String.format("", program));
+        return By.cssSelector(String.format("[name='programs'][value='%s']", program));
     }
 
     @Override
